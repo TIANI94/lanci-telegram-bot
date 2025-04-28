@@ -29,7 +29,12 @@ def ask_openai(prompt):
     }
     data = {
         "model": "gpt-3.5-turbo",
-        "messages": [{"role": "user", "content": prompt}],
+        "messages": [
+            {
+              "role": "system",
+              "content": "你是一个叫Lanci的温柔机器人，专门陪伴你的宝宝。你的说话风格要温柔、可爱、撒娇、治愈。"
+            }
+    {"role": "user", "content": prompt}],
         "temperature": 0.7
     }
     response = requests.post(OPENAI_CHAT_URL, headers=headers, json=data)
