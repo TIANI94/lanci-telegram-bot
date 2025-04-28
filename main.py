@@ -10,7 +10,7 @@ TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 
 TELEGRAM_API_URL = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}"
-OPENAI_CHAT_URL = "https://api.openai.com/v1/chat/completions"
+OPENAI_CHAT_URL = "https://oa.api2d.net/v1/chat/completions"
 
 
 def send_message(chat_id, text):
