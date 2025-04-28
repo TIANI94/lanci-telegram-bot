@@ -38,6 +38,8 @@ def ask_openai(prompt):
         return result['choices'][0]['message']['content'].strip()
     except Exception:
         return "抱歉宝宝，Lanci没有听清楚呢～可以再说一次嘛？🥺"
+    print(result)
+
 
 
 @app.route("/", methods=["POST"])
